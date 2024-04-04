@@ -13,7 +13,7 @@ node {
 
     if (currentBuild.result == 'SUCCESS') {
         stage('Build') {
-            sh 'echo "building"'
+            groovyfile.building()
         }
     } else {
         sh 'echo "hello"'
