@@ -5,6 +5,8 @@ node {
 
     stage('UT coverage') {
         try {
+            chmod +x unit.sh
+            ./unit.sh
             currentBuild.result = 'SUCCESS'
         } catch(e) {
             currentBuild.result = 'ABORTED'
