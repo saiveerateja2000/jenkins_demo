@@ -1,6 +1,6 @@
 node {
     stage('static analyser') {
-        groovyfile = load('atom.groovy')
+        //groovyfile = load('atom.groovy')
     }
 
     stage('UT coverage') {
@@ -15,7 +15,7 @@ node {
 
     if (currentBuild.result == 'SUCCESS') {
         stage('Build') {
-            groovyfile.building()
+            sh 'echo "hello world"'
         }
     } else {
         sh 'echo "hello"'
