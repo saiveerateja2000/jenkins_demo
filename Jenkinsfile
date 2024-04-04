@@ -5,8 +5,8 @@ node {
 
     stage('UT coverage') {
         try {
-            chmod +x unit.sh
-            ./unit.sh
+            sh 'chmod +x unit.sh'
+            sh './unit.sh'
             currentBuild.result = 'SUCCESS'
         } catch(e) {
             currentBuild.result = 'ABORTED'
