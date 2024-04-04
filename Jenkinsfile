@@ -1,4 +1,4 @@
-node("dishnode(55)") {
+node {
     stage('static analyser') {
         groovyfile = load("atom.groovy")
     }
