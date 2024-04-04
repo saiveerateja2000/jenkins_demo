@@ -1,6 +1,6 @@
 node {
     stage('static analyser') {
-        groovyfile = load("atom.groovy")
+        groovyfile = load('atom.groovy')
     }
 
     stage('UT coverage') {
