@@ -1,3 +1,3 @@
 def building() {
-    sh 'echo "building"'
+    sh 'make executable'
 }
