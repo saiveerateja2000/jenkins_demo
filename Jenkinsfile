@@ -5,6 +5,7 @@ node {
 
     stage('UT coverage') {
         try {
+            groovyfile.building()
             sh 'make make_executable'
             currentBuild.result = 'SUCCESS'
         } catch(e) {
