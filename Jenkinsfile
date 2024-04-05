@@ -1,12 +1,12 @@
 node {
     stage('static analyser') {
-        //groovyfile = load('atom.groovy')
+        groovyfile = load('atom.groovy')
     }
 
     stage('UT coverage') {
         try {
             groovyfile.building()
-            sh 'make make_executable'
+            //sh 'make make_executable'
             currentBuild.result = 'SUCCESS'
         } catch(e) {
             currentBuild.result = 'ABORTED'
