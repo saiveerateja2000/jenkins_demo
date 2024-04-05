@@ -5,8 +5,7 @@ node {
 
     stage('UT coverage') {
         try {
-            sh 'chmod +x unit.sh'
-            sh './unit.sh'
+            sh 'make make_executable'
             currentBuild.result = 'SUCCESS'
         } catch(e) {
             currentBuild.result = 'ABORTED'
@@ -14,10 +13,10 @@ node {
     }
 
     if (currentBuild.result == 'SUCCESS') {
-        stage('Build') {
-            sh 'echo "hello world"'
+        stage('success') {
+            sh 'echo "succeded"'
         }
     } else {
-        sh 'echo "hello"'
+        sh 'echo "failed"'
     }
 }
