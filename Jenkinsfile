@@ -1,7 +1,8 @@
 node {
     stage('static analyser') {
-        sh 'ls -la'
-        groovyfile = load("atom.groovy")
+        script {
+            groovyfile = load("atom.groovy")
+        }
     }
 
     stage('UT coverage') {
