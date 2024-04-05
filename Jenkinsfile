@@ -1,5 +1,6 @@
 node {
     stage('static analyser') {
+        sh 'ls -la'
         groovyfile = load("atom.groovy")
     }
 
