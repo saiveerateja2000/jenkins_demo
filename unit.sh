@@ -1,12 +1,23 @@
 #!/bin/bash
 
-# Hardcoded value
-number=15
+# Hardcoded values
+number=10
+OBJECT=($OBJECTS);
+OBJECT_FIRST_THREE=("${OBJECT[@]:0:3}");
 
-# Checking if the number is greater than 10
-if [ $number -gt 10 ]; then
-    echo "The number is greater than 10."
-# If not, then it must be less than or equal to 10
-else
-    echo "The number is less than or equal to 10."
-fi
+echo $OBJECTS;
+
+for obj in "${OBJECT[@]}"; do
+    echo ${obj};
+    python3 -m venv pyvenv/$obj; \
+    . pyvenv/${obj}/bin/activate; \
+    echo $VIRTUAL_ENV
+    if [[ " ${OBJECT_FIRST_THREE[@]} " =~ " ${obj} " ]]; then
+    echo "$obj is in the first three elements of OBJECT"
+    touch pyvenv/${obj}/${obj}_beta.txt
+    pip3 install pylint > /dev/null 2>&1
+    else
+    exit 1
+    fi
+    deactivate
+done
