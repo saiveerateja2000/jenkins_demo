@@ -23,10 +23,4 @@ node {
     } else {
         sh 'echo "failed"'
     }
-    post {
-        always {
-            echo 'Post-build actions executed regardless of build result'
-            // Additional post-build actions to be executed always
-        }
-    }
 }
