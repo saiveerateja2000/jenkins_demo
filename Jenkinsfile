@@ -1,7 +1,7 @@
 node {
     stage('static analyser') {
         script {
-            groovyfile = load("atom.groovy")
+            def groovyfile = load 'atom.groovy'
         }
     }
 
