@@ -1,8 +1,7 @@
 node {
     stage('static analyser') {
         script {
-            def rootDir = pwd()
-            def groovyfile = load '${rootDir}/atom.groovy'
+            def groovyfile = load 'atom.groovy'
         }
     }
 
