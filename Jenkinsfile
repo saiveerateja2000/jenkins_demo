@@ -10,7 +10,7 @@ node {
         try {
             groovyfile.building()
             
-            currentBuild.result = 'SUCCESS'
+            //currentBuild.result = 'SUCCESS'
         } catch(e) {
             currentBuild.result = 'ABORTED'
         }
