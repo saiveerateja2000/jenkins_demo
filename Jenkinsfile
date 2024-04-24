@@ -1,7 +1,7 @@
 node {
     stage('checkout') {
         sh 'echo "cloning repo" '
-        git branch: 'main', url: 'https://github.com/saiveerateja2000/jenkins_demo.git'
+        git branch: 'mallanna', url: 'https://github.com/saiveerateja2000/jenkins_demo.git'
     }
 
     stage('Testing') {
