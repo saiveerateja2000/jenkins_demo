@@ -1,12 +1,11 @@
 node {
-    
     stage('checkout') {
-       sh 'echo "cloning repo" '
-       git branch: 'main', url: 'https://github.com/saiveerateja2000/jenkins_demo.git'
+        sh 'echo "cloning repo" '
+        git branch: 'main', url: 'https://github.com/saiveerateja2000/jenkins_demo.git'
     }
 
     stage('Testing') {
-       sh 'echo "testing is done" '
+        sh 'echo "testing is done" '
     }
     
     stage('Building') {
