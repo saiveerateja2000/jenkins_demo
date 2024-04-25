@@ -5,7 +5,7 @@ node {
     }
 
     stage('Testing') {
-        sh 'echo "testing is done" '
+        sh 'echo "Testing is done" '
     }
     
     stage('Scan') {
