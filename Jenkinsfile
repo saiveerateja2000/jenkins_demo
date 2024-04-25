@@ -10,6 +10,7 @@ node {
     
     stage('Scan') {
         sh 'trivy image alpine:latest'
+    }
     
     stage('Building') {
             sh 'echo "Building application"'
